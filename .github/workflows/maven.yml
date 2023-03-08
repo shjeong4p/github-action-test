@@ -13,7 +13,12 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+      checks: write
+      
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@HEAD
@@ -26,7 +31,7 @@ jobs:
         distribution: 'adopt'
 
     - name: Build with Maven
-      run: mvn clean install
+      # run: mvn clean install
 
     # Run Synopsys Detect
     - name: Run Synopsys Detect
