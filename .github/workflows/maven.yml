@@ -28,12 +28,10 @@ jobs:
 
     # Run Synopsys Detect
     - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.2.0
-      # Enable diagnostic mode
-      # env:
-      #   DETECT_DIAGNOSTIC: true 
+      uses: synopsys-sig/detect-action@v0.3.0
+      env:
+        NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
       with:
-          scan-mode: INTELLIGENT
           github-token: ${{ secrets.GITHUB_TOKEN }}
           detect-version: 7.9.0
           blackduck-url: ${{ secrets.BLACKDUCK_URL }}
