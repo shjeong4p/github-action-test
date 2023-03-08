@@ -28,7 +28,7 @@ jobs:
 
     # Run Synopsys Detect
     - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.3.0
+      uses: synopsys-sig/detect-action@v0.3.4
       env:
         NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
       with:
