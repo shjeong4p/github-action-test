@@ -28,7 +28,7 @@ jobs:
 
     # Run Synopsys Detect
     - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.2.0 # synopsys-sig/detect-action@latest
+      uses: synopsys-sig/detect-action@v0.2.0
       # Enable diagnostic mode
       # env:
       #   DETECT_DIAGNOSTIC: true 
