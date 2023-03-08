@@ -37,4 +37,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           detect-version: 7.9.0
           blackduck-url: ${{ secrets.BLACKDUCK_URL }}
-          blackduck-apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
+          blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN }}
