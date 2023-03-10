@@ -29,8 +29,11 @@ jobs:
       run: mvn clean install
 
     # Run Synopsys Detect
-    - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.3.4
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Synopsys Action
+      uses: synopsys-sig/synopsys-action@v1.0.0
+      
       env:
         NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
         DETECT_DIAGNOSTIC: true
