@@ -43,3 +43,8 @@ jobs:
           #scan-mode: INTELLIGENT
           detect-version: 7.9.0
           blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN }}
+          # Passing false will disable fix pull request creation 
+          blackduck_automation_fixpr: true
+          # Optional parameter. The values could be. ALL|NONE|BLOCKER|CRITICAL|MAJOR|MINOR|OK|TRIVIAL|UNSPECIFIED
+          # Single parameter
+          blackduck_scan_failure_severities: "[\"ALL\"]"
