@@ -42,6 +42,9 @@ jobs:
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN }}
+          # Optional parameter. By default, pushes will initiate a full "intelligent" scan and pull requests
+          # will initiate a rapid scan.
+          blackduck_scan_full: intelligent          
           # Passing false will disable fix pull request creation 
           blackduck_automation_fixpr: false
           # Optional parameter. The values could be. ALL|NONE|BLOCKER|CRITICAL|MAJOR|MINOR|OK|TRIVIAL|UNSPECIFIED
