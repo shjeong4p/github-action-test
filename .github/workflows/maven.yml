@@ -43,7 +43,7 @@ jobs:
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN }}
           # Passing false will disable fix pull request creation 
-          blackduck_automation_fixpr: true
+          blackduck_automation_fixpr: false
           # Optional parameter. The values could be. ALL|NONE|BLOCKER|CRITICAL|MAJOR|MINOR|OK|TRIVIAL|UNSPECIFIED
           # Single parameter
           blackduck_scan_failure_severities: "[\"ALL\"]"
