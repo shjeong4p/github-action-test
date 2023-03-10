@@ -38,6 +38,7 @@ jobs:
         NODE_EXTRA_CA_CERTS: ${{ secrets.LOCAL_CA_CERT_PATH }}
         DETECT_DIAGNOSTIC: true
       with:
+          github.user.token: ${{ secrets.GITHUB_TOKEN }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           #scan-mode: INTELLIGENT
